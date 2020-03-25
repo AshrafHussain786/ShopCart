@@ -1,0 +1,23 @@
+.cart-box{
+    color: white;
+    padding: 10px;
+    border: 0.5px solid slategray;
+}
+
+.text-cart{
+  margin: 0px;
+}
+
+.btn-cart{
+  background-color: cornsilk;
+  color: black;
+  display: inline-block;
+  width: 30px;
+}
+
+.delete{
+  float: right;
+  background-color: transparent;
+  color: whitesmoke;
+  border: none;
+}
