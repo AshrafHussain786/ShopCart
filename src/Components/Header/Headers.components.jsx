@@ -47,7 +47,7 @@ class Header extends Component {
                 }
 
                 <Link to="/cart">
-                    <button type="button" class="view-cart" onClick={this.closeNav}>View Cart</button>
+                    <button type="button" class="view-cart" onClick={() => this.setState({width : "0px"})}>View Cart</button>
                 </Link>
                 
             </div>

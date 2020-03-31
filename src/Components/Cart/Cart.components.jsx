@@ -24,7 +24,7 @@ const Cart = ({cart}) => {
                 </thead>
                     <tbody>
                         {
-                            cart.length != 0
+                            cart.length !== 0
                             ?
                             cart.map((item, index) => <CartCardComponents 
                                                                         key={index}
