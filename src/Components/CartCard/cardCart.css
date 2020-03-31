@@ -1,0 +1,13 @@
+.cart_img{
+    width: 120px;
+}
+
+.trash{
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.quantity{
+    text-align: center;
+}

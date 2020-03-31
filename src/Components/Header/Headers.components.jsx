@@ -2,6 +2,7 @@ import React, { Fragment, Component} from "react";
 import "./header.css";
 import {connect} from "react-redux"
 import CartItems from "../CartItems/CartItems.component"
+import {Link} from "react-router-dom";
 
 
 
@@ -44,6 +45,10 @@ class Header extends Component {
                                                     total={item.total}/>
                                                 )
                 }
+
+                <Link to="/cart">
+                    <button type="button" class="view-cart" onClick={this.closeNav}>View Cart</button>
+                </Link>
                 
             </div>
         </Fragment>
@@ -52,7 +57,10 @@ class Header extends Component {
 }
 
 const mapStateToProps = (state) => {
-    return state;
+    return {
+        cart: state.cart.cart,
+        cart_quantity: state.cart.cart_quantity,
+    }
 }
 
 export default connect(mapStateToProps)(Header);

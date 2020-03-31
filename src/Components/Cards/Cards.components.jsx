@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 
 import CardItems from '../CardItems/CardItems.components';
 
-const Cards = ({products, cart_quantity}) => {
+const Cards = ({products}) => {
     return(
     <Fragment>
         <div className="container">
@@ -23,7 +23,9 @@ const Cards = ({products, cart_quantity}) => {
 }
 
 const mapStateToProps = (state) => {
-    return state;
+    return {
+        products : state.cart.products,
+    }
 }
 
 export default connect(mapStateToProps)(Cards);
