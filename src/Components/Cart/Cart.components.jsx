@@ -8,10 +8,10 @@ const Cart = ({cart}) => {
     return(
         <Fragment>
             <Link to="/">
-                    <i class="fa fa-arrow-left back"></i>
+                    <i className="fa fa-arrow-left back"></i>
                 </Link>
-            <div class="cartelement">
-                <table class="table">
+            <div className="cartelement">
+                <table className="table">
                 <thead>
                     <tr>
                     <th scope="col">Image</th>
@@ -35,10 +35,12 @@ const Cart = ({cart}) => {
                                                                         productId={item.product.id}/>)
                             :
                             <tr className="quantity">
+                                <td>
                                 <p>THE CART IS EMPTY!</p>
                                 <Link to="/">
-                                    <button type="button" class="view-cart">Go Back to Shop</button>
+                                    <button type="button" className="view-cart">Go Back to Shop</button>
                                 </Link>
+                                </td>
                             </tr>
                             
                         }

@@ -102,9 +102,15 @@ const cartDelete = (id, cart) => {
     return arr;
 }
 
+const getQuantityOfDeleteItem = (id, cart) => {
+    const array = cart.filter(item => item.product.id === id);
+    return array[0].quantity;
+}
+
 export const deleteFromCart = (cart_quantity, id, cart) => {
+    const old_quantity = getQuantityOfDeleteItem(id, cart);
     const newCart = cartDelete(id, cart)
-    cart_quantity -= 1;
+    cart_quantity -= old_quantity;
     return {
         type: DELETE_FROM_CART,
         payload: {
